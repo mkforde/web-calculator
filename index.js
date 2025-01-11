@@ -77,6 +77,8 @@ document.addEventListener("keypress", (event) => {
   }
 });
 
+// Delete keys
+
 document.addEventListener("keyup", (event) => {
   if (event.key == "Backspace" || event.key == "Delete") {
     if (mode == "equals") {
@@ -94,6 +96,8 @@ document.addEventListener("keyup", (event) => {
     }
   }
 });
+
+// Calculator Buttons
 
 document.addEventListener("click", (event) => {
   if (event.target.nodeName == "BUTTON") {
@@ -141,6 +145,8 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+// Keyboard interactions
 
 document.addEventListener("keypress", (event) => {
   let key = event.key;
