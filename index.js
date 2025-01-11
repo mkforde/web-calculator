@@ -6,10 +6,6 @@ let keypad = document.querySelector(".keypad");
 
 let keys = [7, 8, 9, "÷", 4, 5, 6, "x", 1, 2, 3, "-", 0, "=", "+"];
 
-for (let key of keys) {
-  console.log(key);
-}
-
 keys.forEach((key) => {
   let button = document.createElement("button");
   button.textContent = key;
@@ -107,33 +103,26 @@ document.addEventListener("click", (event) => {
         displayNumber == 0
           ? updateDisplay(key)
           : updateDisplay(`${displayNumber}${key}`);
-        console.log(`Display number is ${displayNumber}`);
       } else {
         operationNumber == 0
           ? updateDisplay(key)
           : updateDisplay(`${operationNumber}${key}`);
-        console.log(`Operation number is ${operationNumber}`);
       }
     } else {
       switch (key) {
         case "+":
-          console.log("plus");
           add();
           break;
         case "-":
-          console.log("minus");
           subtract();
           break;
         case "x":
-          console.log("times");
           multiply();
           break;
         case "÷":
-          console.log("divide");
           divide();
           break;
         case "=":
-          console.log("equals");
           equals();
           break;
         case "Reset":
@@ -155,41 +144,32 @@ document.addEventListener("keypress", (event) => {
       displayNumber == 0
         ? updateDisplay(event.key)
         : updateDisplay(`${displayNumber}${event.key}`);
-      console.log(`Display number is ${displayNumber}`);
     } else {
       operationNumber == 0
         ? updateDisplay(event.key)
         : updateDisplay(`${operationNumber}${event.key}`);
-      console.log(`Operation number is ${operationNumber}`);
     }
   } else {
     switch (key) {
       case "+":
-        console.log("plus");
         add();
         break;
       case "-":
-        console.log("minus");
         subtract();
         break;
       case "x":
-        console.log("times");
         multiply();
         break;
       case "*":
-        console.log("times");
         multiply();
         break;
       case "/":
-        console.log("divide");
         divide();
         break;
       case "=":
-        console.log("equals");
         equals();
         break;
       case "Enter":
-        console.log("equals");
         equals();
         break;
       default:
