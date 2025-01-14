@@ -50,10 +50,10 @@ function updateDisplay(number) {
     clear();
     updateTinyText("Number to big", display);
   } else if (mode == "equals") {
-    displayNumber = Number.parseInt(number);
+    displayNumber = Number.parseFloat(number);
     updateText(displayNumber.toLocaleString(), display);
   } else {
-    operationNumber = Number.parseInt(number);
+    operationNumber = Number.parseFloat(number);
     updateText(operationNumber.toLocaleString(), display);
   }
 }
